@@ -29,10 +29,9 @@ web_include_css = "/assets/whitelabel/css/whitelabel_web.css"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+doctype_js = {
+    "Custom Utils Actions": "public/js/custom_utils_actions.js"
+}
 
 # Home Pages
 # ----------
@@ -65,6 +64,16 @@ after_migrate = ['whitelabel.api.whitelabel_patch']
 
 # before_install = "whitelabel.install.before_install"
 # after_install = "whitelabel.install.after_install"
+
+# Patches
+# -------
+
+patches = [
+	"whitelabel.patches.add_custom_utils_shortcut",
+	"whitelabel.patches.add_custom_utils_actions_shortcut",
+	"whitelabel.patches.add_custom_utils_actions_shortcut_v2",
+	"whitelabel.patches.debug_tools_workspace"
+]
 
 # Desk Notifications
 # ------------------
@@ -130,6 +139,14 @@ fixtures = [
 # Overriding Methods
 # ------------------------------
 #
+whitelisted_methods = [
+    "whitelabel.custom_utils.get_public_workspaces",
+    "whitelabel.custom_utils.update_workspace_order",
+    "whitelabel.custom_utils.get_workspace_doc",
+    "whitelabel.custom_utils.add_shortcut_to_workspace",
+    "whitelabel.custom_utils.check_doctype_exists"
+]
+
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "whitelabel.event.get_events"
 # }
@@ -144,4 +161,7 @@ fixtures = [
 # override_whitelisted_methods = {
 # 	"frappe.utils.change_log.show_update_popup": "whitelabel.api.ignore_update_popup"
 # }
+
+# Module Category - for Desk
+module_categories = {"Whitelabel": "Tools"}
 
