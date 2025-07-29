@@ -84,3 +84,18 @@ def show_update_popup_update():
 	if update_message:
 		frappe.msgprint(update_message, title=_("New updates are available"), indicator='green')
 		cache.srem("update-user-set", user)
+
+import frappe
+
+@frappe.whitelist() # Ini penting untuk mengekspos fungsi sebagai API
+def get_current_user_roles():
+    """
+    Mengembalikan daftar peran untuk pengguna yang sedang login.
+    """
+    current_user_id = frappe.session.user
+    user_roles = frappe.get_roles()
+
+    # Pertahankan logging ini untuk debugging lebih lanjut jika diperlukan
+    frappe.log_error(f"DEBUG_CUSTOM_APP_API: User ID: '{current_user_id}', Roles: {len(user_roles)}", "CUSTOM_APP_ROLES_TRACE")
+
+    return user_roles

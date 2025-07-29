@@ -1,3 +1,16 @@
 .footer-powered{
 	display: none!important;
 }
+
+.app-logo {
+    width: 263pv !important;
+    height: 304px !important;
+}
+.page-card-head{
+    max-height: auto !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+}
+.page-card-head img {
+    max-height: 304px !important;
+}

@@ -12,7 +12,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "maheshwaribhavesh95863@gmail.com"
 app_license = "MIT"
-app_logo_url = '/assets/whitelabel/images/whitelabel_logo.jpg'
+app_logo_url = '/assets/whitelabel/images/whitelabel_logo.svg'
 
 # Includes in <head>
 # ------------------
@@ -72,7 +72,9 @@ patches = [
 	"whitelabel.patches.add_custom_utils_shortcut",
 	"whitelabel.patches.add_custom_utils_actions_shortcut",
 	"whitelabel.patches.add_custom_utils_actions_shortcut_v2",
-	"whitelabel.patches.debug_tools_workspace"
+	"whitelabel.patches.debug_tools_workspace",
+	"whitelabel.patches.create_custom_workspaces",
+	"whitelabel.patches.hide_erpnext_workspaces"
 ]
 
 # Desk Notifications
@@ -164,4 +166,6 @@ whitelisted_methods = [
 
 # Module Category - for Desk
 module_categories = {"Whitelabel": "Tools"}
+
+
 
