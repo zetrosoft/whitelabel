@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-31 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "hidden_doctypes_section",
+  "hidden_doctypes",
+  "doctype_cards"
+ ],
+ "fields": [
+  {
+   "fieldname": "hidden_doctypes_section",
+   "fieldtype": "Section Break",
+   "label": "DocType Visibility"
+  },
+  {
+   "fieldname": "hidden_doctypes",
+   "fieldtype": "Code",
+   "label": "Hidden DocTypes",
+   "description": "JSON list of hidden DocTypes. This field is managed by the UI below.",
+   "hidden": 1
+  },
+  {
+   "fieldname": "doctype_cards",
+   "fieldtype": "HTML",
+   "label": "DocType Settings"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-07-31 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "whitelabel",
+ "name": "DocType Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

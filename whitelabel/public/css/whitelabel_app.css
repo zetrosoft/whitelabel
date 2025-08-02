@@ -1,3 +1,27 @@
 li.dropdown.dropdown.dropdown-help.dropdown-mobile {
 	display: none!important;
 }
+/* Whitelabel App CSS */
+.main-section, body {
+    background-image: url('/files/background.jpeg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: repeat !important;
+    /*height: 100vh !important;
+    width: 100vw !important; */
+    margin: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    /* z-index: -1 !important; */
+}
+.page-container {
+	background-color: transparent !important; /* Make the page container transparent */
+}
+/* html {
+    height: 100vh !important;
+    margin: 0 !important;
+} */
+.page-card, .for-login, .form-card {
+    background: rgba(255, 255, 255, 0.8) !important; /* Semi-transparent card for readability */
+}
