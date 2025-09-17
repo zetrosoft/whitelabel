@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from . import __version__ as app_version
-from . import __logo__ as app_logo
-
-
 app_name = "whitelabel"
 app_title = "Whitelabel"
 app_publisher = "Bhavesh Maheshwari"
@@ -13,6 +10,7 @@ app_color = "grey"
 app_email = "maheshwaribhavesh95863@gmail.com"
 app_license = "MIT"
 app_logo_url = '/assets/whitelabel/images/whitelabel_logo.svg'
+app_logo = app_logo_url
 
 # Includes in <head>
 # ------------------

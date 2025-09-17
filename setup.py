@@ -5,7 +5,8 @@ with open('requirements.txt') as f:
 	install_requires = f.read().strip().split('\n')
 
 # get version from __version__ variable in whitelabel/__init__.py
-from whitelabel import __version__ as version
+# from whitelabel import __version__ as version
+version = '0.0.1'
 
 setup(
 	name='whitelabel',
